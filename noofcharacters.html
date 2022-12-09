@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			margin: 0%;
+			background-color: pink;
+
+		}
+		.message-area{
+			width: 30%;
+			border-radius: 10px;
+			padding: 2%;
+			
+			margin: 15%;
+			margin-bottom: 0%;
+			outline: none;
+			font-family: serif;
+			font-style: 1rem;
+		}
+	</style>
+	<script type="text/javascript">
+		function showCount(){
+			var readMessage=document.getElementById("readmessage").value,left=20-readMessage.length;
+			if(left<=20 && left!=0){
+				document.getElementById("count").innerHTML=left
+			}
+			else{
+				document.getElementById("count").style.display="none"
+			}
+		}	 
+			
+		
+	</script>
+</head>
+<body>
+	<textarea id="readmessage" onkeyup="showCount()" rows="5" class=" message-area"></textarea>
+	<p>Number of characters left:<span id="count"></span></p>
+</body>
+</html>
